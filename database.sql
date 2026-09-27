@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS demon_fall (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    player_id INT NOT NULL,
+    last_used TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (player_id) REFERENCES users(identifier)
+);
